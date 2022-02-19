@@ -8,6 +8,13 @@
  *
  * Operating System Concepts - 10th Edition
  * Copyright John Wiley & Sons - 2018
+ * 
+ * Description: in this section we will create and load a linux kernel module. Working 
+ * with kernel modules will allow you to directly invoke kernel functions. 
+ * 
+ * Commnad notes: 
+ * - lsmod: this command will list all of the kernel modules currently loaded. List the name, 
+ * size, and where the module is being loaded. 
  */
 
 #include <linux/init.h>
