@@ -15,6 +15,7 @@
  * Commnad notes: 
  * - lsmod: this command will list all of the kernel modules currently loaded. List the name, 
  * size, and where the module is being loaded. 
+ * - wget: downloads files from remote systems. 
  */
 
 #include <linux/init.h>
