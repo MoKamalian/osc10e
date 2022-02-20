@@ -1,36 +1,30 @@
-/**
- * simple.c
- *
- * A simple kernel module. 
- * 
- * To compile, run makefile by entering "make"
- *
- * Operating System Concepts - 10th Edition
- * Copyright John Wiley & Sons - 2018
- */
-
 #include <linux/init.h>
-#include <linux/module.h>
 #include <linux/kernel.h>
+#include <linux/module.h>
 
-/* This function is called when the module is loaded. */
-static int simple_init(void)
+/* 
+Description: this module, when loaded and unloaded prints a message.
+notes: 
+- the simple_init() is the modules entry point (invoked when the module is loaded into the kernel).
+- The function called when the module is unloaded from the kernel is simple_exit
+*/
+
+/* function called when the module is loaded */
+{ 
+    printk(KERN_INFO "Loading Kernel Module\n");
+
+    return 0;
+}
+
+/* functoin called when module is removed */
 {
-       printk(KERN_INFO "Loading Module\n");
-
-       return 0;
+    printk(KERN_INFO "Removing Kernel Module\n");
 }
 
-/* This function is called when the module is removed. */
-static void simple_exit(void) {
-	printk(KERN_INFO "Removing Module\n");
-}
+/* these are the macros that are used registering module entry and exit points */
+module_init(simple_init);
+module_exit(simple_exit);
 
-/* Macros for registering module entry and exit points. */
-module_init( simple_init );
-module_exit( simple_exit );
-
-MODULE_LICENSE("GPL");
+MODULE_LICENSE("GLP");
 MODULE_DESCRIPTION("Simple Module");
 MODULE_AUTHOR("SGG");
-
