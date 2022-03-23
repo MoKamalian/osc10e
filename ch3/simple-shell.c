@@ -18,8 +18,12 @@ int main(void) {
 	char *args[MAX_LINE / 2 + 1];
 	int should_run = 1;
 	/* as long as should_run is 1 the program will continue to ask user for input */
+	char input[50];
 	while(should_run) {
 		printf("osh>");
+		fgets(input, 50, stdin);
+		printf("%s", input);
+		should_run = 0;
 		fflush(stdout);
 
 		/**
@@ -31,6 +35,7 @@ int main(void) {
 		
 	} 
 
+	
 	//execvp(char *command, char params[]);
 
 	return 0;
