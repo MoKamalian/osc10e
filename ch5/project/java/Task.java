@@ -10,13 +10,13 @@
  *  int priority - the relative priority of a task where a higher number indicates
  *  higher relative priority.
  *
- *  int burst - the CPU burst of this this task
+ *  int burst - the CPU burst of this task
  */
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Task
-{
+public class Task {
+    
     // the representation of each task
     private String name;
     private int tid;

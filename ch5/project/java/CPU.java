@@ -6,8 +6,7 @@
  * @author Greg Gagne - March 2016
  */
  
-public class CPU
-{
+public class CPU {
     /**
      * Run the specified task for the specified slice of time.
      */
