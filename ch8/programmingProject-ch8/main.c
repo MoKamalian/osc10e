@@ -9,15 +9,7 @@
 
 
 #include <stdio.h>
-
-/* macro definitions */
-#define NUMBER_OF_CUSTOMERS 5
-#define NUMBER_OF_RESOURCES 4
-
-/* function prototypes for requesting and releasing resources */
-int request_resources(int customer_num, int request[]);
-
-int release_resources(int customer_num, int release[]);
+#include "banker.h"
 
 
 int main(int argc, char** argv) {
