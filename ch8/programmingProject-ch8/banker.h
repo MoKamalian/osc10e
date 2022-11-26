@@ -9,6 +9,8 @@
 
 #pragma once
 
+#include <stdio.h>
+#include <stdbool.h>
 
 /* macro definitions */
 #define NUMBER_OF_CUSTOMERS 5
@@ -17,6 +19,6 @@
 /* function prototypes for requesting and releasing resources */
 int request_resources(int customer_num, int* request, int* available, int* need[], int** allocation);
 
-int release_resources(int customer_num, int release[]);
+int release_resources(int customer_num, int release[], int* available);
 
 
