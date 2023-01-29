@@ -17,6 +17,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <ctype.h>
 #include <stdbool.h>
 
@@ -63,8 +64,16 @@ int main(int argc, char** argv) {
     bool programEnd = false;
     while(!programEnd) {
         
+        char input[2]; 
         printf("allocator>");
+        scanf("%s", input);
 
+        if(strcmp(input, "X") == 0) {
+            programEnd = true;
+            continue;
+        } else if(strcmp(input, "RQ") == 0) {
+            
+        }
 
     }
 
